@@ -4,19 +4,20 @@ import withMT from "@material-tailwind/react/utils/withMT";
 
 export default withMT({
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/pages/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/*.{js,ts,jsx,tsx,mdx}',
+    './src/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
         primary: {
-          100: '#337EEA',
+          100: '#00146b',
+          50: '#00b4ff',
         },
         secondary: {
-          10: '#EDEEF3',
-          20: '#A2B1C1',
+          10: '#f3f7ff',
+          20: '#d5dded',
           100: '#131828',
         },
       },

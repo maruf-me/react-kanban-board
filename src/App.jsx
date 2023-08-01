@@ -1,16 +1,8 @@
-import { ThemeProvider, Button } from "@material-tailwind/react";
-function App() {
+import Home from "./pages/Home";
+import { ThemeProvider } from "@material-tailwind/react";
 
-  return (
-    <ThemeProvider>
-      <div>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-        <Button>Button</Button>
-      </div>
-    </ThemeProvider>
-  )
+const App = () => {
+  return (<ThemeProvider> <Home /> </ThemeProvider>)
 }
 
 export default App

@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+@layer base {
+    html {
+        font-family: 'Poppins', sans-serif;
+    }
+} */
+
+/* @layer components {
+    .container {
+        @apply mx-auto w-11/12 md: w-10/12;
+    }
+
+    .Nav__Link.active {
+        @apply text-blue-500 after: bg-blue-400 after:w-full after:opacity-100;
+    }
+
+    .nav__after {
+        @apply after: absolute after:opacity-0 hover:after:opacity-100 after:h-0.5 after:w-1 hover:after:w-full after:left-0 after:duration-500 after:bg-green-400 sm:after:-bottom-3.5 after:-bottom-2.5;
+    }
+
+    .input__style {
+        @apply py-2 lg: py-2.5 px-3 w-full border border-gray-300 rounded-lg shadow-sm focus:outline-none placeholder:text-gray-300 hover:border-gray-400 focus:border-gray-600 text-gray-600;
+    }
+} */
