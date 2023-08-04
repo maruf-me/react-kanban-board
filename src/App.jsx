@@ -1,8 +1,8 @@
-import Home from "./pages/Home";
+import Routes from "./routes/routes";
 import { ThemeProvider } from "@material-tailwind/react";
 
 const App = () => {
-  return (<ThemeProvider> <Home /> </ThemeProvider>)
+  return (<ThemeProvider> <Routes /> </ThemeProvider>)
 }
 
 export default App

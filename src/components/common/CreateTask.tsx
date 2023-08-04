@@ -1,0 +1,51 @@
+import React, { useState } from 'react'
+import CustomInput from '../forms/CustomInput'
+import { Button } from '@material-tailwind/react'
+import { ITaskTypes } from '../../interface/TaskTypes'
+import CustomDatePicker from '../forms/CustomDatePicker';
+import { uuid } from '../../utility/randomID';
+import moment from 'moment';
+
+const CreateTask = () => {
+    const [taskTitle, setTaskTitle] = useState<string | undefined>()
+    const [startDate, setStartDate] = useState<Date | string>(new Date());
+    const formatDate = moment(startDate).format('DD-MM-YYYY');
+
+    const [createTask, setCreateTask] = useState<ITaskTypes>({
+        id: '',
+        title: '',
+        dueDate: '',
+        status: 'todo',
+        description: '',
+    })
+
+    const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        setCreateTask((prv) => ({ ...prv, id: uuid(), title: taskTitle, dueDate: formatDate }))
+    }
+
+    console.log({ createTask });
+
+    return (
+        <div className='flex flex-col items-center gap-3'>
+            <h2 className="text-primary-100 font-semibold text-lg py-4">Create Your Task</h2>
+
+            <form className="flex gap-4 flex-col" onSubmit={handleSubmit}>
+                <div className="flex gap-4 items-center">
+                    <CustomInput
+                        value={taskTitle}
+                        divStyle='w-[20rem]'
+                        placeholder='Create Task'
+                        className="!rounded-full"
+                        onChange={(e) => setTaskTitle(e.target.value)}
+                    />
+
+                    <CustomDatePicker onChange={(date) => setStartDate(date)} selected={startDate} />
+                </div>
+                <Button type='submit' className='text-lg bg-primary-100 rounded-full'>Create</Button>
+            </form>
+        </div>
+    )
+}
+
+export default CreateTask
