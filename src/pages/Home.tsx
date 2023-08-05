@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <Dashboard>
             <div className="flex items-center justify-center h-[80vh]">
-                <h1 className="text-primary-100 text-4xl font-bold">
+                <h1 className="text-primary-100 text-xl sm:text-4xl font-bold">
                     Welcome to CodeRex
                 </h1>
             </div>

@@ -52,7 +52,7 @@ const EditTask = ({ todo, id }: IProps) => {
                                 value={title}
                                 divStyle='w-[20rem]'
                                 placeholder='Create Task'
-                                className="border-secondary-20 focus:border-gray-600"
+                                className="border-secondary-20 bg-white focus:border-gray-600"
                                 onChange={(e) => setTitle(() => e.target.value)}
                             />
                         </div>

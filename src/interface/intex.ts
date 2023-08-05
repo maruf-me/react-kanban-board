@@ -14,5 +14,4 @@ export interface IInitialState {
     date: string;
     todo: ITaskTypes;
     todos: ITaskTypes[];
-    statuses: IStatusTypes[];
 }

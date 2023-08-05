@@ -29,10 +29,10 @@ const CreateTask = () => {
             <h2 className="text-primary-100 font-semibold text-lg py-4">Create Your Task</h2>
 
             <form className="flex gap-4 flex-col" onSubmit={handleSubmit}>
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-2 md:gap-4 items-center">
                     <CustomInput
                         value={taskTitle}
-                        divStyle='w-[20rem]'
+                        divStyle='md:w-[20rem]'
                         placeholder='Create Task'
                         className="!rounded-full"
                         onChange={(e) => setTaskTitle(() => e.target.value)}

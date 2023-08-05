@@ -11,9 +11,9 @@
 }
 
 @layer components {
-    /* .container {
-        @apply mx-auto w-11/12 md:w-10/12;
-    } */
+    .container {
+        @apply mx-auto w-11/12 lg:w-10/12;
+    }
 
     .nav__after.active {
         @apply text-primary-100 after:bg-primary-100 after:w-full after:opacity-100;

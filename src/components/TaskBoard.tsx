@@ -1,9 +1,9 @@
 import React from 'react'
 import TaskCard from './TaskCard';
+import { useDrop } from 'react-dnd';
 import BoardTitle from './BoardTitle';
 import { setDropTodos } from '../services/appSlice';
 import { useAppDispatch, useAppSelector } from '../services/hooks';
-import { useDrop } from 'react-dnd';
 
 interface IProps { status: string; icon: string }
 
@@ -24,7 +24,7 @@ const TaskBoard = ({ status, icon }: IProps) => {
     };
 
     return (
-        <div ref={drop} className="bg-secondary-10 rounded-md shadow-md min-h-[28rem]">
+        <div ref={drop} className="bg-secondary-10 rounded-md shadow-md min-h-[24rem]">
             <BoardTitle status={status} icon={icon} />
             <ul className="p-3 space-y-3">
                 {todos.filter((i, index) => i.status === status).map((item, idx) => (

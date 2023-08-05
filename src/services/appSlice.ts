@@ -4,7 +4,6 @@ import { IInitialState, ITaskTypes } from "../interface/intex";
 
 const initialState: IInitialState = {
     date: new Date().toISOString().slice(0, 10),
-    statuses: [],
     todos: [{
         id: uuid(),
         status: "open",
@@ -26,10 +25,13 @@ const appSlice = createSlice({
     initialState,
     reducers: {
         addTodo: (state, action: PayloadAction<ITaskTypes>) => { state.todo = action.payload },
+
         setTodos: (state) => { state.todos = [...state.todos, state.todo] },
+
         removeTodo: (state, action: PayloadAction<string>) => {
             state.todos = state.todos.filter(todo => todo.id !== action.payload)
         },
+
         editTodo: (state, action: PayloadAction<ITaskTypes>) => {
             let { id, title, dueDate, description } = action.payload
             let oldTodo = state.todos.filter(todo => todo.id !== id)
@@ -37,9 +39,8 @@ const appSlice = createSlice({
             state.todos = [...oldTodo, { ...updatedTodo[0], title, dueDate, description }]
 
         },
-        setDropTodos: (state, action: PayloadAction<ITaskTypes[]>) => {
-            state.todos = action.payload;
-        },
+
+        setDropTodos: (state, action: PayloadAction<ITaskTypes[]>) => { state.todos = action.payload; },
     }
 })
 
