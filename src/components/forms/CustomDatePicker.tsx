@@ -10,13 +10,14 @@ interface ICustiomDatePicker {
 interface IProps {
     selected: Date | string;
     onChange: (date: Date) => void;
+    className?: string;
 }
 
-const CustomDatePicker = ({ selected, onChange }: IProps) => {
+const CustomDatePicker = ({ selected, onChange, className }: IProps) => {
     const [startDate, setStartDate] = useState(new Date());
 
     const ExampleCustomInput = forwardRef(({ value, onClick }: ICustiomDatePicker, ref) => (
-        <button type='button' className=" bg-transparent  text-primary-100 border border-primary-100 p-3 px-4 rounded-full" onClick={onClick} ref={ref as React.LegacyRef<HTMLButtonElement>}>
+        <button type='button' className={`${className} bg-transparent  text-primary-100 border border-primary-100 p-3 px-4 rounded-full`} onClick={onClick} ref={ref as React.LegacyRef<HTMLButtonElement>}>
             {value}
         </button>
     ));

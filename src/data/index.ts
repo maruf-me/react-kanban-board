@@ -1,5 +1,5 @@
 import { uuid } from "../utility/randomID";
-import { ITaskTypes } from "../interface/TaskTypes";
+import { ITaskTypes } from "../interface/intex";
 
 let data: ITaskTypes[] = [
   {
