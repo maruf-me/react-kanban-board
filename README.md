@@ -1,8 +1,12 @@
 # React Kanban Board
 
-![React Kanban Board](/image/view.png)
+![React Kanban Board](/public/image/view.png)
 
 A Kanban board built with React and React DND for managing tasks.
+
+## Demo
+
+Check out the live demo: [Demo Link](https://dev-dnd.netlify.app/)
 
 ## Table of Contents
 
