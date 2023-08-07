@@ -32,7 +32,7 @@ React Kanban Board is a web application designed to help users manage tasks usin
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-username/react-kanban-board.git`
+1. Clone the repository: `git clone https://github.com/devschapy/react-kanban-board.git`
 2. Navigate to the project directory: `cd react-kanban-board`
 3. Install dependencies: `npm install`
 
