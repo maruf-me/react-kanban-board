@@ -50,6 +50,7 @@ React
 React DND
 Material Tailwind
 Redux Toolkit
+Redux Persist
 React Router
 React Datepicker
 @iconify/react
