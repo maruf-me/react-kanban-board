@@ -24,7 +24,7 @@ const TaskBoard = ({ status, icon }: IProps) => {
     };
 
     return (
-        <div ref={drop} className="bg-secondary-10 rounded-md shadow-md min-h-[24rem]">
+        <div ref={drop} className={`${isOver? 'bg-gray-200 border-2 border-white': 'bg-secondary-10 border border-gray-200'} rounded-md shadow-md min-h-[24rem] duration-300`}>
             <BoardTitle status={status} icon={icon} />
             <ul className="p-3 space-y-3">
                 {todos.filter((i, index) => i.status === status).map((item, idx) => (

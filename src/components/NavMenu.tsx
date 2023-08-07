@@ -6,8 +6,9 @@ const NavMenu = () => {
     return (
         <div className='bg-secondary-20 py-3'>
             <div className="container mx-auto flex items-center justify-between">
-                <NavLink to="/">
-                    <img src='/image/code_rex.png' alt="logo" className='rounded-lg' height={54} width={100} />
+                <NavLink to="/" className="text-2xl font-bold">
+                    <span className="text-primary-100">Dev</span>
+                    <span className="text-primary-50">Schapy</span>
                 </NavLink>
 
                 <ul className="flex gap-4 items-center">

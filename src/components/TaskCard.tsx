@@ -20,7 +20,7 @@ const TaskCard = ({ todo, icon }: IProps) => {
 
     return (
         <>
-            <li ref={drag} key={todo.id} className={`${isDragging ? 'opacity-20 border-dashed' : 'bg-white'} border border-secondary-20 rounded-md shadow-md p-3 cursor-move flex justify-between gap-4`}>
+            <li ref={drag} key={todo.id} className={`${isDragging ? 'opacity-30 border-dashed border-2 border-gray-400' : 'bg-white'} border border-secondary-20 rounded-md shadow-md p-3 cursor-move flex justify-between gap-4`}>
 
                 <article className="space-y-2 w-full">
                     <p className="text-md text-primary-100 font-semibold">
