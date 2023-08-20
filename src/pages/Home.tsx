@@ -4,7 +4,9 @@ import { useGetData } from '../hooks/useAppData'
 
 const Home = () => {
     const { data, isLoading } = useGetData('get-post'); 
-    
+
+    console.log("data-----------", data)
+
     return (
         <Dashboard>
             <div className="flex items-center justify-center h-[80vh]">

@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useQuery } from 'react-query';
 
 export const useGetData = (key) => {
-   const result = useQuery(key, () => axios.get('https://jsonplaceholder.typicode.com/posts'));
+   const result = useQuery(key, () => axios.get('http://localhost:4000/todos'));
    return result;
 }
 
