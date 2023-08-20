@@ -15,5 +15,6 @@ export const usePostData = (key, payload) => {
 
 export const useDeleteData = (key, id) => {
    const result = useQuery(key, () => axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`));
+   console.log(result)
    return result;
 } 
