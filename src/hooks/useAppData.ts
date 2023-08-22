@@ -1,8 +1,9 @@
 import axios from 'axios';
 import { useQuery } from 'react-query';
 
+const baseUrl = `https://my-json-server.typicode.com/devschapy/json-server`
 export const useGetData = (key) => {
-   const result = useQuery(key, () => axios.get('http://localhost:4000/todos'));
+   const result = useQuery(key, () => axios.get(`${baseUrl}/todos`));
    return result;
 }
 
